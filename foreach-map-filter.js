@@ -40,7 +40,6 @@ function showFirstAndLast(arr){
     return arr.map(function(val){
         return val[0] + val[val.length - 1]
     })
-
 }
 
 /*
@@ -70,7 +69,15 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+    let vowels = "aeiou";
+    let obj = {};
+    for (let char of str.toLowerCase()){
+        if(vowels.includes(char) && obj[char]){
+            obj[char] += 1
+        }
+        else if(vowels.includes(char)){obj[char] = 1}
+    }
+    return obj
 }
 
 /*
