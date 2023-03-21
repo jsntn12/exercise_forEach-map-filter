@@ -40,7 +40,7 @@ function showFirstAndLast(arr){
     return arr.map(function(val){
         return val[0] + val[val.length - 1]
     })
-    
+
 }
 
 /*
@@ -53,7 +53,10 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    
+    return arr.map(function(item){
+        item[key] = value
+        return item
+    })
 }
 
 /*
