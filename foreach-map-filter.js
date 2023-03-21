@@ -104,7 +104,9 @@ Examples:
 */
 
 function valTimesIndex(arr){
-    
+    return arr.map(function(num, i){
+        return num * i
+    })
 }
 
 /*
