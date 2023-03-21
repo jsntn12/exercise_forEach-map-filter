@@ -130,7 +130,9 @@ Examples:
 */
 
 function extractFullName(arr){
-    
+    return arr.map(function(obj){
+        return Object.values(obj).join(" ")
+    })
 }
 
 /*
